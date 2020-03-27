@@ -1,0 +1,15 @@
+@media screen and (min-width: 800px) {
+    .Card_flex {
+        display: -webkit-flex;
+        flex-direction:row; 
+    }
+  
+}
+
+@media screen and (max-width: 768px) {
+    .Card_mobile {
+        display: -webkit-flex;
+        flex-direction:column; 
+    }
+  
+}
