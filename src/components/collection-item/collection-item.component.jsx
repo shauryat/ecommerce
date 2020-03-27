@@ -74,8 +74,7 @@ const CollectionItem = ({ item, addItem }) => {
       color="default" startIcon={<CartIcon />} 
       onClick={handleClickOpen}>
       Add To Cart
-      </Button>
-       
+      </Button>  
       </CardActions>
     </Card>
     
