@@ -9,13 +9,14 @@ import {
   PreviewContainer
 } from './collection-preview.styles';
 
+
 const styles = {
   root: {
-    padding: '0 3rem',
-    marginLeft : '-1.9rem'
+    padding: '0 2rem',
+    marginLeft : '-0.9rem'
   },
   slideContainer: {
-    marginLeft:'-1rem',
+    marginLeft:'-0.2rem',
     
   }, 
 

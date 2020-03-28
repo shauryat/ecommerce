@@ -8,11 +8,11 @@ import SwipeableViews from 'react-swipeable-views';
 
 const styles = {
   root: {
-    padding: '0 3rem',
-    marginLeft : '-1.9rem'
+    padding: '0 2rem',
+    marginLeft : '-0.9rem'
   },
   slideContainer: {
-    marginLeft:'-1rem',
+    marginLeft:'-0.2rem',
     
   }, 
 
@@ -23,9 +23,10 @@ const CollectionPage = ({ collection }) => {
   return (
    
   <div>
+  
      <CollectionTitle>{title}</CollectionTitle>
-     
      <Breakpoint small down>
+     <br/>
        <SwipeableViews style={styles.root} slideStyle={styles.slideContainer}>
          {items.map(item => (
                <CollectionItem key={item.id} item={item} />
