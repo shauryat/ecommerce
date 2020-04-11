@@ -16,6 +16,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import './styles.scss';
 
 const CollectionItem = ({ item, addItem }) => {
@@ -24,7 +25,7 @@ const CollectionItem = ({ item, addItem }) => {
 
   const theme = createMuiTheme({
     palette: {
-       type:"dark",
+       type:'light',
        primary : {
          main:'#4caf50'
        },
@@ -32,10 +33,11 @@ const CollectionItem = ({ item, addItem }) => {
          main: '#f44336'
        }
     },
-   
-
 
   });
+
+  
+  const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
   
   const handleClickOpen = () => {
     setOpen(true);
@@ -48,12 +50,12 @@ const CollectionItem = ({ item, addItem }) => {
   return (
     <ThemeProvider theme={theme}>
   <div className="normal mobile">
-    <Card className="mobile" elevation={1}>
+    <Card className="mobile" variant="outlined">
     
     <CardActionArea>
         <CardMedia
           component="img"
-          height="250"
+          height="299"
           image={imageUrl}
         />
         <CardContent>
@@ -80,6 +82,7 @@ const CollectionItem = ({ item, addItem }) => {
     
     <Dialog
     open={open}
+    fullScreen={fullScreen}
     onClose={handleClose}
     aria-labelledby="alert-dialog-title"
     aria-describedby="alert-dialog-description"
@@ -93,11 +96,11 @@ const CollectionItem = ({ item, addItem }) => {
     </DialogContent>
     <DialogActions>
       <Button onClick={handleClose} color="secondary">
-        Disagree
+        No
       </Button>
       <Button color="primary" autoFocus  onClick={() => {
         handleClose() ;  addItem(item);}}>
-        Agree
+        Yes
       </Button>
     </DialogActions>
   </Dialog>

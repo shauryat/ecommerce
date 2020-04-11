@@ -18,7 +18,7 @@ import {
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
   return (
-    <CheckoutItemContainer elevation={3}>
+    <CheckoutItemContainer variant="outlined">
       <ImageContainer>
         <img src={imageUrl} alt='item' />
       </ImageContainer>
